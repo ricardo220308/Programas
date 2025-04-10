@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Fútbol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+    <header>
+        <h1>BIENVENIDO A TU TIENDA RICHIGOOL</h1>
+        <img src="logo.jpg" class="logo" alt="" text-aling="center">
+    </header>
+
+    <div class="category-container">
+        <label for="categoriaSelect">Selecciona una categoría:</label>
+        <select id="categoriaSelect" onchange="mostrarProductos()">
+            <option value="">Selecciona una opción</option>
+            <option value="playeras">Playeras</option>
+            <option value="guantes">Guantes de Portero</option>
+            <option value="balones">Balones</option>
+            <option value="accesorios">Accesorios</option>
+        </select>
+    </div>
+
+    <div id="productos" class="productos-container"></div>
+
+    <div class="total">
+        <h3>Total: $<span id="totalAmount">0</span></h3>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
