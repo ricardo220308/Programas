@@ -12,16 +12,16 @@ const productos = {
         { nombre: "Playera 10", precio: 650, img: "playera10.jpg" }
     ],
     guantes: [
-        { nombre: "Guante 1", precio: 500, img: "balon1,jpg" },
-        { nombre: "Guante 2", precio: 550, img: "balon2.jpg" },
-        { nombre: "Guante 3", precio: 600, img: "h" },
-        { nombre: "Guante 4", precio: 650, img: "https://via.placeholder.com/300?text=Guante4" },
-        { nombre: "Guante 5", precio: 300, img: "https://via.placeholder.com/300?text=Guante5" },
-        { nombre: "Guante 6", precio: 400, img: "https://via.placeholder.com/300?text=Guante6" },
-        { nombre: "Guante 7", precio: 350, img: "https://via.placeholder.com/300?text=Guante7" },
-        { nombre: "Guante 8", precio: 850, img: "https://via.placeholder.com/300?text=Guante8" },
-        { nombre: "Guante 9", precio: 250, img: "https://via.placeholder.com/300?text=Guante9" },
-        { nombre: "Guante 10", precio: 450, img: "https://via.placeholder.com/300?text=Guante10" }
+        { nombre: "Guante 1", precio: 500, img: "guantes1.jpg" },
+        { nombre: "Guante 2", precio: 550, img: "guantes2.jpg" },
+        { nombre: "Guante 3", precio: 600, img: "guantes3.jpg" },
+        { nombre: "Guante 4", precio: 650, img: "guantes4.jpg" },
+        { nombre: "Guante 5", precio: 300, img: "guantes5.jpg" },
+        { nombre: "Guante 6", precio: 400, img: "guantes6.jpg" },
+        { nombre: "Guante 7", precio: 350, img: "guantes7.jpg" },
+        { nombre: "Guante 8", precio: 850, img: "guantes8.jpg" },
+        { nombre: "Guante 9", precio: 250, img: "guantes9.jpg" },
+        { nombre: "Guante 10", precio: 450, img: "guantes10.jpg" }
     ],
     balones: [
         { nombre: "Balón 1", precio: 400, img: "balon1.jpg" },
