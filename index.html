@@ -6,14 +6,24 @@
     <title>Tienda de Fútbol</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="mostrarProductos()">
 
 <div class="main-container">
     <header>
         <h1>BIENVENIDO A TU TIENDA RICHIGOOL</h1>
-        <img src="logo.jpg" class="logo" alt="" text-aling="center">
+        <img src="logo.jpg" class="logo" alt="">
     </header>
 
+    
+    <div id="inicioContainer" class="inicio-container">
+        <h2>¡Bienvenido a nuestra tienda de fútbol!</h2>
+        <p>
+            Aquí encontrarás todo lo que necesitas para disfrutar de tu pasión por el deporte rey. Desde camisetas de tus equipos favoritos hasta balones de alta calidad, tenemos una amplia variedad de productos para que puedas lucir tu estilo y mejorar tu juego. Nuestro objetivo es brindarte la mejor experiencia de compra y hacer que te sientas parte de la comunidad futbolística. ¿En qué podemos ayudarte hoy?
+        </p>
+        <img src="bienvenida.jpg" alt="Imagen de bienvenida" class="imagen-inicio">
+    </div>
+
+    
     <div class="category-container">
         <label for="categoriaSelect">Selecciona una categoría:</label>
         <select id="categoriaSelect" onchange="mostrarProductos()">
@@ -25,12 +35,20 @@
         </select>
     </div>
 
+   
     <div id="productos" class="productos-container"></div>
 
+    
     <div class="total">
         <h3>Total: $<span id="totalAmount">0</span></h3>
     </div>
 </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
 
 <script src="script.js"></script>
 
