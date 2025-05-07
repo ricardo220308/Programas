@@ -32,7 +32,7 @@ const productos = {
         { nombre: "Balón 6", precio: 650, img: "balon6.jpg" },
         { nombre: "Balón 7", precio: 700, img: "balon7.jpg" },
         { nombre: "Balón 8", precio: 750, img: "balon8.jpg" },
-        { nombre: "Balón 9", precio: 780,  img: "balon9.jpg" },
+        { nombre: "Balón 9", precio: 780, img: "balon9.jpg" },
         { nombre: "Balón 10", precio: 300, img: "balon10.jpg" }
     ],
     accesorios: [
@@ -41,11 +41,11 @@ const productos = {
         { nombre: "Accesorio 3", precio: 90, img: "accesorio3.jpg" },
         { nombre: "Accesorio 4", precio: 70, img: "accesorio4.jpg" },
         { nombre: "Accesorio 5", precio: 30, img: "accesorio5.jpg" },
-        { nombre: "Accesorio 6", precio: 50, img: "acceso6.jpg" },
-        { nombre: "Accesorio 7", precio: 270, img: "Accesorios7.jpg" },
-        { nombre: "Accesorio 8", precio: 150, img: "accesorios8.jpg" },
-        { nombre: "Accesorio 9", precio: 100, img: "accesorios9.jpg" },
-        { nombre: "Accesorio 10", precio: 350, img: "accesorios10.jpg" }
+        { nombre: "Accesorio 6", precio: 50, img: "accesorio6.jpg" },
+        { nombre: "Accesorio 7", precio: 270, img: "accesorios7.jpg" },
+        { nombre: "Accesorio 8", precio: 150, img: "accesorio8.jpg" },
+        { nombre: "Accesorio 9", precio: 100, img: "accesorio9.jpg" },
+        { nombre: "Accesorio 10", precio: 350, img: "accesorio10.jpg" }
     ]
 };
 
@@ -54,9 +54,11 @@ let total = 0;
 function mostrarProductos() {
     const categoria = document.getElementById("categoriaSelect").value;
     const productosDiv = document.getElementById("productos");
+    const inicioContainer = document.getElementById("inicioContainer");
     let contenido = "";
 
     if (categoria) {
+        inicioContainer.style.display = "none";
         productos[categoria].forEach(producto => {
             contenido += `
                 <div class="producto">
@@ -68,6 +70,9 @@ function mostrarProductos() {
             `;
         });
         productosDiv.innerHTML = contenido;
+    } else {
+        productosDiv.innerHTML = "";
+        inicioContainer.style.display = "block";
     }
 }
 
@@ -75,5 +80,4 @@ function agregarAlCarrito(precio) {
     total += precio;
     document.getElementById("totalAmount").innerText = total;
 }
-
 
