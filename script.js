@@ -41,53 +41,76 @@ const productos = {
       { nombre: "Accesorio 3", precio: 90, img: "accesorio3.jpg" },
       { nombre: "Accesorio 4", precio: 70, img: "accesorio4.jpg" },
       { nombre: "Accesorio 5", precio: 30, img: "accesorio5.jpg" },
-      { nombre: "Accesorio 6", precio: 50, img: "acceso6.jpg" },
-      { nombre: "Accesorio 7", precio: 270, img: "Accesorios7.jpg" },
-      { nombre: "Accesorio 8", precio: 150, img: "accesorios8.jpg" },
+      { nombre: "Accesorio 6", precio: 50, img: "accesorio6.jpg" },
+      { nombre: "Accesorio 7", precio: 270, img: "accesorio7.jpg" },
+      { nombre: "Accesorio 8", precio: 150, img: "accesorio8.jpg" },
       { nombre: "Accesorio 9", precio: 100, img: "accesorio9.jpg" },
-      { nombre: "Accesorio 10", precio: 350, img: "accesorios10.jpg" }
+      { nombre: "Accesorio 10", precio: 350, img: "accesorio10.jpg" }
     ]
   };
   
-  let total = 0;
-  
-  function mostrarProductos() {
-    const categoria = document.getElementById("categoriaSelect").value;
-    const productosDiv = document.getElementById("productos");
-    const bienvenidaDiv = document.getElementById("seccion-bienvenida");
-    let contenido = "";
-  
-    productosDiv.innerHTML = "";
-    bienvenidaDiv.style.display = "none";
-  
-    if (categoria === "Bienvenida") {
-      bienvenidaDiv.style.display = "block";
-    } else if (productos[categoria]) {
-      productos[categoria].forEach(producto => {
-        contenido += `
-          <div class="producto">
-            <img src="${producto.img}" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-            <p>$${producto.precio}</p>
-            <button onclick="agregarAlCarrito(${producto.precio})">Agregar</button>
-          </div>
-        `;
-      });
-      contenido += `<div style="text-align:center;"><button class="btn-atras" onclick="irAInicio()">Atrás</button></div>`;
-      productosDiv.innerHTML = contenido;
-    }
-  }
-  
-  function agregarAlCarrito(precio) {
-    total += precio;
-    document.getElementById("totalAmount").innerText = total;
-  }
-  
-  function irAInicio() {
-    document.getElementById("categoriaSelect").value = "Bienvenida";
-    mostrarProductos();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  
+  let carrito = [];
 
+function mostrarProductos() {
+  const categoria = document.getElementById("categoriaSelect").value;
+  const productosDiv = document.getElementById("productos");
+  const bienvenidaDiv = document.getElementById("seccion-bienvenida");
+  productosDiv.innerHTML = "";
+  bienvenidaDiv.style.display = "none";
 
+  if (categoria === "Bienvenida") {
+    bienvenidaDiv.style.display = "block";
+  } else if (productos[categoria]) {
+    productos[categoria].forEach(producto => {
+      productosDiv.innerHTML += `
+        <div class="producto">
+          <img src="${producto.img}" alt="${producto.nombre}">
+          <h3>${producto.nombre}</h3>
+          <p>$${producto.precio}</p>
+          <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+        </div>
+      `;
+    });
+
+    
+    productosDiv.innerHTML += `
+      <div style="text-align:center; margin-top: 20px;">
+        <button onclick="comprarTodo()" class="btn-comprar-todo">Comprar todo</button>
+        <button class="btn-atras" onclick="irAInicio()">Atrás</button>
+      </div>
+    `;
+  }
+}
+
+function agregarAlCarrito(nombre, precio) {
+  carrito.push({ nombre, precio });
+  actualizarTotal();
+}
+
+function actualizarTotal() {
+  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+  document.getElementById("totalAmount").innerText = total;
+}
+
+function comprarTodo() {
+  if (carrito.length === 0) {
+    alert("El carrito está vacío.");
+    return;
+  }
+
+  const listaProductos = carrito.map(item => `- ${item.nombre} ($${item.precio})`).join('\n');
+  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+
+  alert(`Has comprado:\n${listaProductos}\n\nTotal a pagar: $${total}`);
+
+  carrito = [];
+  actualizarTotal();
+}
+
+function irAInicio() {
+  document.getElementById("categoriaSelect").value = "Bienvenida";
+  carrito = []; 
+  actualizarTotal();
+  mostrarProductos();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
