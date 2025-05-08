@@ -43,7 +43,7 @@ const productos = {
       { nombre: "Accesorio 5", precio: 30, img: "accesorio5.jpg" },
       { nombre: "Accesorio 6", precio: 50, img: "acceso6.jpg" },
       { nombre: "Accesorio 7", precio: 270, img: "Accesorios7.jpg" },
-      { nombre: "Accesorio 8", precio: 150, img: "accesorio8.jpg" },
+      { nombre: "Accesorio 8", precio: 150, img: "accesorios8.jpg" },
       { nombre: "Accesorio 9", precio: 100, img: "accesorios9.jpg" },
       { nombre: "Accesorio 10", precio: 350, img: "accesorios10.jpg" }
     ]
