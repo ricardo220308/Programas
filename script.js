@@ -41,11 +41,11 @@ const productos = {
       { nombre: "Accesorio 3", precio: 90, img: "accesorio3.jpg" },
       { nombre: "Accesorio 4", precio: 70, img: "accesorio4.jpg" },
       { nombre: "Accesorio 5", precio: 30, img: "accesorio5.jpg" },
-      { nombre: "Accesorio 6", precio: 50, img: "accesorio6.jpg" },
-      { nombre: "Accesorio 7", precio: 270, img: "accesorio7.jpg" },
+      { nombre: "Accesorio 6", precio: 50, img: "acceso6.jpg" },
+      { nombre: "Accesorio 7", precio: 270, img: "Accesorios7.jpg" },
       { nombre: "Accesorio 8", precio: 150, img: "accesorio8.jpg" },
-      { nombre: "Accesorio 9", precio: 100, img: "accesorio9.jpg" },
-      { nombre: "Accesorio 10", precio: 350, img: "accesorio10.jpg" }
+      { nombre: "Accesorio 9", precio: 100, img: "accesorios9.jpg" },
+      { nombre: "Accesorio 10", precio: 350, img: "accesorios10.jpg" }
     ]
   };
   
