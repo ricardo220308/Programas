@@ -1,0 +1,296 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #5d86f7;
+    color: #333;
+    padding-top: 60px;
+  }
+
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #00bfff;
+  }
+  
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .category-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  select:hover {
+    border-color: #007BFF;
+  }
+  
+  .productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .producto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .producto h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .producto p {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+  }
+  
+  .producto button {
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .producto button:hover {
+    background-color: #888621;
+  }
+  
+  .total {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  
+  .btn-atras {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-atras:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Bienvenida enmarcada */
+  .bienvenida-box {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  
+  .bienvenida-box h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  .bienvenida-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .image-container img {
+    width: 300px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+.btn-comprar-todo {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+  /*CONTACTO*/
+.fondo-contacto{
+    text-align: center;
+    background-image: url(imgbarca/img-fondo-5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.formulario{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background-color: #ffffffa5;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(56, 131, 243, 0.847);
+    border-radius: 20px;
+    text-align: center;
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.h2-contacto{
+    color: #000;
+    font-size: 45px;
+}
+
+.label-contacto{
+    color: #000;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.input-contacto, .textarea-contacto, .btn, .btn-volver{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #f7d2009c;
+    border: 3px solid #0d009c;
+    color: #000000;
+    outline: none;
+    font-weight: 500;
+}
+input::placeholder, textarea::placeholder{
+    color: #0d009c;
+    font-weight:600;
+}
+.btn, .btn-volver{
+    font-size: 16px;
+    font-weight: 900;
+    color: #000;
+    border: 0;
+    border-radius: 25px;
+    background-color: #ff0000;
+    box-shadow: 0 0 20px rgb(2, 4, 117);
+    cursor: pointer;
+}
+.btn:hover, .btn-volver:hover{
+    background-color: #0d009c;
+    transition: 1s;
+}
+.btn-volver{
+    text-align: center;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .formulario {
+    padding: 20px;
+    align-items: flex-start;
+  }
+  form {
+    width: 100%;
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+  .h2-contacto {
+    font-size: 32px;
+  }
+  .label-contacto {
+    font-size: 14px;
+  }
+  .input-contacto, .textarea-contacto, .btn, .btn-volver {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .btn, .btn-volver {
+    font-size: 15px;
+  }
+}

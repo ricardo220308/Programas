@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+      <h1>BIENVENIDO A TU TIENDA RICHIGOOL</h1>
+      <img src="logo.jpg" class="logo" alt="Logo" />
+    </header>
+
+    <section class="fondo-contacto">
+        <div class="formulario">
+            <form action="https://formsubmit.co/zuriel22032000@gmail.com" method="POST">
+                <h2 class="h2-contacto">Recomendaciones</h2><br>
+                <div class="input-group">
+                    <label class="label-contacto" for="name">Nombre:</label>
+                    <input class="input-contacto" type="text" name="name" id="name" placeholder="Nombre">
+                    <label class="label-contacto" for="phone">Telefono:</label>
+                    <input class="input-contacto" type="tel" name="phone" id="phone" placeholder="Telefono">
+                    <label class="label-contacto" for="email"> Correo:</label>
+                    <input class="input-contacto" type="email" name="email" id="email" placeholder="Correo">
+                    <label class="label-contacto" for="message">Tu recomendacion:</label>
+                    <textarea class="textarea-contacto" name="message" id="message" cols="30" rows="5" placeholder="Tu recomendacion"></textarea>
+                    <input class="btn" type="submit" value="Enviar">
+                    <a href="index.html" class="btn-volver">Volver a la tienda</a>
+
+                    <input type="hidden" name="_next" value="https://ricardo220308.github.io/Programas/contacto.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
